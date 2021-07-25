@@ -1,7 +1,5 @@
-#include "CText.h"
-#include "CText.h"
-#include "CText.h"
-#include "common.h"
+#include <CText.h>
+#include <common.h>
 
 namespace rbe {
     CText::CText() :

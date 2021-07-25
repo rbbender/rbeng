@@ -1,5 +1,5 @@
 #include <vector>
-#include "common.h"
+#include <common.h>
 #include <spdlog/spdlog.h>
 
 namespace rbe

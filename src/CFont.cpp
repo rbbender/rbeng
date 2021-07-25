@@ -2,7 +2,7 @@
 #include <spdlog/spdlog.h>
 #include <ft2build.h>
 #include FT_FREETYPE_H
-#include "CFont.h"
+#include <CFont.h>
 
 namespace rbe {
 

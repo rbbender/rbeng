@@ -1,7 +1,10 @@
 #include <spdlog/spdlog.h>
-#include "CWindow2D.h"
+#include <CWindow2D.h>
 
 namespace rbe {
+    const std::string SHADERS_DIR = "shaders";
+    const std::string FONTS_DIR = "fonts";
+
     void window_resize_cb(GLFWwindow* w, int width, int height)
     {
         auto* wnd = static_cast<CWindow2D*>(glfwGetWindowUserPointer(w));
@@ -36,13 +39,13 @@ namespace rbe {
 		spdlog::info("RBE: initializing 2d stuff");
 		try
 		{
-			auto dshv = CShader{ "shaders\\default.vs", EShaderType::Vertex };
-			auto dshf = CShader{ "shaders\\default.fs", EShaderType::Fragment };
+			auto dshv = CShader{ "shaders/default.vs", EShaderType::Vertex };
+			auto dshf = CShader{ "shaders/default.fs", EShaderType::Fragment };
 			auto shader = std::make_shared<CShaderProgram>(dshv, dshf);
-			auto textshader = std::make_shared<CShaderProgram>(CShader{ "shaders\\font.vs", EShaderType::Vertex },
-				CShader{ "shaders\\font.fs", EShaderType::Fragment });
-            auto primitiveShader = std::make_shared<CShaderProgram>(CShader{ "shaders\\primitive.vs", EShaderType::Vertex },
-                CShader{ "shaders\\primitive.fs", EShaderType::Fragment });
+			auto textshader = std::make_shared<CShaderProgram>(CShader{ "shaders/font.vs", EShaderType::Vertex },
+				CShader{ "shaders/font.fs", EShaderType::Fragment });
+            auto primitiveShader = std::make_shared<CShaderProgram>(CShader{ "shaders/primitive.vs", EShaderType::Vertex },
+                CShader{ "shaders/primitive.fs", EShaderType::Fragment });
 			if (SetDefaultShader(shader) != 0 || SetDefaultTextShader(textshader) != 0 || 
                 SetDefaultPrimitiveShader(primitiveShader) != 0)
 			{
@@ -52,7 +55,7 @@ namespace rbe {
 			fontModel[1][1] = -1.0f;
 			textshader->SetModel(fontModel);
             InitFonts();
-			auto font = std::make_shared<CFont>("fonts\\VelaSans-Regular.ttf", 16);
+			auto font = std::make_shared<CFont>("fonts/VelaSans-Regular.ttf", 16);
             ReleaseFonts();
 			if (SetDefaultFont(font) != 0)
 			{

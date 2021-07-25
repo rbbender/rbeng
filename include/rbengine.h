@@ -5,6 +5,8 @@
 #include "CText.h"
 #include "CDecal.h"
 #include "CCircle.h"
+#include "CShaderProgram.h"
+#include "CFont.h"
 #include "common.h"
 
 namespace rbe

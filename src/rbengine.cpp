@@ -1,6 +1,4 @@
-#include "rbe.h"
-#include "CShaderProgram.h"
-#include "CFont.h"
+#include <rbengine.h>
 
 namespace rbe
 {

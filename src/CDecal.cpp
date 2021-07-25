@@ -1,5 +1,5 @@
-#include "CDecal.h"
-#include "common.h"
+#include <CDecal.h>
+#include <common.h>
 
 namespace rbe {
     CDecal::CDecal(CTexturePtr pTexture) :

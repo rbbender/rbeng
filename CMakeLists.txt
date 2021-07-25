@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project("rbeng")
+project("rbengine")
 
 set(CMAKE_CXX_FLAGS_RELEASE "/MT /Zi")
 set(CMAKE_CXX_FLAGS_DEBUG "/MTd /Zi /Od")

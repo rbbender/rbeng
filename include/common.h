@@ -1,9 +1,9 @@
 #pragma once
 
 #include <vector>
-#include "CShaderProgram.h"
-#include "CBasicWindow.h"
-#include "CFont.h"
+#include <CShaderProgram.h>
+#include <CBasicWindow.h>
+#include <CFont.h>
 
 namespace rbe
 {

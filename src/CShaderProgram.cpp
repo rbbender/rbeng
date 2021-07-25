@@ -1,7 +1,7 @@
 #include <fstream>
 #include <sstream>
 #include <glm/gtc/type_ptr.hpp>
-#include "CShaderProgram.h"
+#include <CShaderProgram.h>
 
 namespace rbe {
 
