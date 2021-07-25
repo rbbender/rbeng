@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../glad.h"
+#include "glad.h"
 
 namespace rbe {
     class CGLBaseObject
